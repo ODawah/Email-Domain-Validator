@@ -20,7 +20,6 @@ func DomainExtractor(email string) (string, error) {
 }
 
 func main() {
-	fmt.Println(DomainExtractor("omar@gmail.com"))
 	scanner := bufio.NewScanner(os.Stdin)
 	fmt.Printf("domain, hasMx,hasSPF,sprRecord,hasDMARC,dmarcRecord\n")
 	for scanner.Scan() {
@@ -35,7 +34,7 @@ func main() {
 	}
 }
 
-func checkDomain(domain string) {
+func CheckDomain(domain string) {
 	var hasMx, hasSPF, hasDMARC bool
 	var spfRecord, dmarcRecord string
 
