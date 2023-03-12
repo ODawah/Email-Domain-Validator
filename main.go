@@ -25,7 +25,7 @@ func main() {
 	for scanner.Scan() {
 		domain, err := DomainExtractor(scanner.Text())
 		if err == nil {
-			checkDomain(domain)
+			CheckDomain(domain)
 		}
 		continue
 	}
